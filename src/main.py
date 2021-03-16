@@ -12,6 +12,7 @@ def generate_password(length):
 
 
 def get_correct_user_input(message):
+    user_input = ""
     while True:
         try:
             user_input = int(input(message) or default_length)
@@ -29,6 +30,6 @@ output = generate_password(user_int_input)
 print(output)
 
 
-password_file = open('password.txt','a')
-password_file.write(output +"\n")
+password_file = open('password.txt', 'a')
+password_file.write(output + "\n")
 password_file.close()
